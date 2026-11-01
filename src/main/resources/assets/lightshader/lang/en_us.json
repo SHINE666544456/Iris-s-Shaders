@@ -1,0 +1,28 @@
+{
+  "key.category.lightshader.main": "LightShader",
+  "key.lightshader.cycle": "Cycle Preset",
+  "key.lightshader.toggle": "Toggle Shaders",
+  "key.lightshader.screen": "Open Settings",
+  "key.lightshader.reload": "Reload Shaders",
+
+  "lightshader.screen.title": "LightShader",
+  "lightshader.shaders": "Shaders: %s",
+  "lightshader.preset": "Preset: %s",
+  "lightshader.auto": "Auto Quality: %s",
+  "lightshader.minfps": "Auto Quality Min FPS: %s",
+  "lightshader.reload": "Reload Shaders",
+  "lightshader.on": "ON",
+  "lightshader.off": "OFF",
+
+  "lightshader.preset.lite": "Lite",
+  "lightshader.preset.balanced": "Balanced",
+  "lightshader.preset.cinematic": "Cinematic",
+  "lightshader.preset.vivid": "Vivid",
+
+  "lightshader.msg.preset": "LightShader preset: %s",
+  "lightshader.msg.on": "LightShader: ON",
+  "lightshader.msg.off": "LightShader: OFF",
+  "lightshader.msg.downgrade": "LightShader: low FPS, switched to %s",
+  "lightshader.msg.autooff": "LightShader: low FPS, shaders turned off",
+  "lightshader.msg.failed": "LightShader: preset failed to load, shaders disabled (see latest.log)"
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "lightshader",
+  "version": "${version}",
+  "name": "LightShader",
+  "description": "Lightweight single-pass post-processing shader engine: presets, depth AO, bloom-lite, grading, auto quality.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.lightshader.LightShaderClient"]
+  },
+  "mixins": ["lightshader.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

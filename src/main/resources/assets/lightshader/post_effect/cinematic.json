@@ -1,0 +1,109 @@
+{
+  "targets": {
+    "swap": {}
+  },
+  "passes": [
+    {
+      "vertex_shader": "minecraft:core/screenquad",
+      "fragment_shader": "lightshader:post/grade",
+      "inputs": [
+        {
+          "sampler_name": "Main",
+          "target": "minecraft:main",
+          "bilinear": true
+        },
+        {
+          "sampler_name": "MainDepth",
+          "target": "minecraft:main",
+          "use_depth_buffer": true
+        }
+      ],
+      "output": "swap",
+      "uniforms": {
+        "LightShaderConfig": [
+          {
+            "name": "Exposure",
+            "type": "float",
+            "value": 1.0
+          },
+          {
+            "name": "Contrast",
+            "type": "float",
+            "value": 1.18
+          },
+          {
+            "name": "Saturation",
+            "type": "float",
+            "value": 0.95
+          },
+          {
+            "name": "Warmth",
+            "type": "float",
+            "value": 0.2
+          },
+          {
+            "name": "Vignette",
+            "type": "float",
+            "value": 0.45
+          },
+          {
+            "name": "Sharpen",
+            "type": "float",
+            "value": 0.25
+          },
+          {
+            "name": "BloomStrength",
+            "type": "float",
+            "value": 0.55
+          },
+          {
+            "name": "BloomThreshold",
+            "type": "float",
+            "value": 0.6
+          },
+          {
+            "name": "BloomRadius",
+            "type": "float",
+            "value": 2.5
+          },
+          {
+            "name": "AoStrength",
+            "type": "float",
+            "value": 0.55
+          },
+          {
+            "name": "AoRadius",
+            "type": "float",
+            "value": 1.2
+          },
+          {
+            "name": "HazeStrength",
+            "type": "float",
+            "value": 0.35
+          },
+          {
+            "name": "HazeStart",
+            "type": "float",
+            "value": 0.35
+          },
+          {
+            "name": "Far",
+            "type": "float",
+            "value": 512.0
+          }
+        ]
+      }
+    },
+    {
+      "vertex_shader": "minecraft:core/screenquad",
+      "fragment_shader": "lightshader:post/blit",
+      "inputs": [
+        {
+          "sampler_name": "In",
+          "target": "swap"
+        }
+      ],
+      "output": "minecraft:main"
+    }
+  ]
+}
